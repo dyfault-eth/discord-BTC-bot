@@ -34,7 +34,29 @@ bot.on(Events.InteractionCreate, async(interaction) => {
         
             await interaction.reply({content: `${id} : ${priceResult}$, ${priceVar}% last 24H`, ephemeral: true})
         } catch (error) {
-            await interaction.reply({content: "vous avez cassez l'api vous êtes content ? :GOGOLE:", ephemeral: true})
+            if (price.success === false) {
+                await interaction.reply({content: "you broke Coingecko API, are you enjoy ? :GOGOLE:", ephemeral: true});
+            }
+        }
+    }
+
+    if (interaction.commandName === "btc") {
+        try {
+            let price = await coingeckoclient.coins.markets({
+                ids: 'bitcoin',
+                vs_currencies: 'usd'
+            });
+
+            console.log(price);
+        
+            let priceResult = price.data[0]["current_price"];
+            let priceVar = Number(price.data[0]["price_change_percentage_24h"]).toFixed(2);
+        
+            await interaction.reply({content: `Bitcoin : ${priceResult}$, ${priceVar}% last 24H`, ephemeral: true})
+        } catch (error) {
+            if (price.success === false) {
+                await interaction.reply({content: "you broke Coingecko API, are you enjoy ? :GOGOLE:", ephemeral: true});
+            }
         }
     }
 });
