@@ -1,0 +1,25 @@
+{
+  "name": "discord-btc-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node deploy-commands.js && node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dyfault-eth/discord-BTC-bot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dyfault-eth/discord-BTC-bot/issues"
+  },
+  "homepage": "https://github.com/dyfault-eth/discord-BTC-bot#readme",
+  "dependencies": {
+    "coingecko-api": "^1.0.10",
+    "discord.js": "^14.8.0",
+    "dotenv": "^16.0.3"
+  }
+}
