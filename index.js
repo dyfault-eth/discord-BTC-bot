@@ -35,7 +35,7 @@ bot.on(Events.InteractionCreate, async(interaction) => {
             await interaction.reply({content: `${id} : ${priceResult}$, ${priceVar}% last 24H`, ephemeral: true})
         } catch (error) {
             if (error) {
-                await interaction.reply({content: "you broke Coingecko API, are you enjoy ? :GOGOLE:", ephemeral: true});
+                await interaction.reply({content: "you broke Coingecko API, are you happy ? <:GOGOLE:1081207132210348152>", ephemeral: true});
             }
         }
     }
@@ -55,7 +55,7 @@ bot.on(Events.InteractionCreate, async(interaction) => {
             await interaction.reply({content: `Bitcoin : ${priceResult}$, ${priceVar}% last 24H`, ephemeral: true})
         } catch (error) {
             if (error) {
-                await interaction.reply({content: "you broke Coingecko API, are you enjoy ? :GOGOLE:", ephemeral: true});
+                await interaction.reply({content: "you broke Coingecko API, are you happy ? <:GOGOLE:1081207132210348152>", ephemeral: true});
             }
         }
     }
